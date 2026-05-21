@@ -22,6 +22,9 @@ WORKDIR /app
 # Copy requirements first to leverage Docker cache
 COPY requirements.txt .
 
+# Install CPU-only PyTorch and Torchaudio first to prevent CUDA bloating
+RUN pip install --no-cache-dir torch torchaudio --index-url https://download.pytorch.org/whl/cpu
+
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
