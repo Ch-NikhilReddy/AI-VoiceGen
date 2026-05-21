@@ -1,0 +1,24 @@
+# Ignore Python build artifacts and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints/
+
+# Ignore local audio outputs and voice samples
+outputs/
+voices/
+
+# Ignore Git directory
+.git
+.gitignore
+
+# Ignore local OS metadata
+.DS_Store
+Thumbs.db
